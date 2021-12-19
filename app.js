@@ -19,10 +19,10 @@ function showAllTasks() {
             taskList.innerHTML += 
             `
             <div class="d-flex my-2">
-                <li class="list-group-item bg-secondary text-light w-75">${task}</li>
-                <div>
+                <li class="list-group-item bg-task text-light w-75">${task}</li>
+                <div class="d-flex">
                     <button type="button" class="btn btn-primary btn primary-btn delete-item p-2 px-3 mx-1">Delete</button>
-                    <button type="button" class="btn btn-danger edit-item p-2 px-4">Edit</button>
+                    <button type="button" class="btn btn-danger edit-item p-2 px-4 mx-1">Edit</button>
                 </div>
             </div>
             `;
@@ -42,11 +42,11 @@ function addTask() {
         taskList.innerHTML += 
         `
         <div class="d-flex my-2">
-            <li class="list-group-item bg-secondary text-light w-75">${task}</li>
-                <div class="">
-                    <button type="button" class="btn btn-primary btn primary-btn delete-item p-2 px-3 mx-1">Delete</button>
-                    <button type="button" class="btn btn-danger edit-item p-2 px-4">Edit</button>
-                </div>
+            <li class="list-group-item bg-task text-light w-75">${task}</li>
+            <div class="d-flex">
+                <button type="button" class="btn btn-primary btn primary-btn delete-item p-2 px-3 mx-1">Delete</button>
+                <button type="button" class="btn btn-danger edit-item p-2 px-4 mx-1">Edit</button>
+            </div>
         </div>
         `;
         localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -105,28 +105,17 @@ function searchTask(e) {
                     searchedTasks.push(task);
                     taskList.innerHTML += `
                     <div class="d-flex my-2">
-                        <li class="list-group-item bg-secondary text-light w-75">${task}</li>
-                        <div class="">
+                        <li class="list-group-item bg-task text-light w-75">${task}</li>
+                        <div class="d-flex">
                             <button type="button" class="btn btn-primary btn primary-btn delete-item p-2 px-3 mx-1">Delete</button>
-                            <button type="button" class="btn btn-danger edit-item p-2 px-4">Edit</button>
+                            <button type="button" class="btn btn-danger edit-item p-2 px-4 mx-1">Edit</button>
                         </div>
                     </div>
                     `;
                 }
             }
         } else {
-            taskList.innerHTML = '';
-            tasks.forEach(task=>{
-                taskList.innerHTML += `
-                <div class="d-flex my-2">
-                    <li class="list-group-item bg-secondary text-light w-75">${task}</li>
-                    <div class="">
-                        <button type="button" class="btn btn-primary btn primary-btn delete-item p-2 px-3 mx-1">Delete</button>
-                        <button type="button" class="btn btn-danger edit-item p-2 px-4">Edit</button>
-                    </div>
-                </div>
-                `;
-            });
+            showAllTasks();
         }
     })
 }
