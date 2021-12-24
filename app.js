@@ -115,6 +115,7 @@ function searchTask(e) {
                 }
             }
         } else {
+            taskList.innerHTML = '';
             showAllTasks();
         }
     })
