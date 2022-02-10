@@ -21,8 +21,8 @@ function showAllTasks() {
             <div class="d-flex my-2">
                 <li class="list-group-item bg-task text-light w-75">${task}</li>
                 <div class="d-flex">
-                    <button type="button" class="btn btn-primary btn primary-btn delete-item p-2 px-3 mx-1">Delete</button>
-                    <button type="button" class="btn btn-danger edit-item p-2 px-4 mx-1">Edit</button>
+                    <button type="button" class="btn btn-danger btn primary-btn delete-item p-2 px-3 mx-1">Delete</button>
+                    <button type="button" class="btn btn-primary edit-item p-2 px-4 mx-1">Edit</button>
                 </div>
             </div>
             `;
@@ -44,8 +44,8 @@ function addTask() {
         <div class="d-flex my-2">
             <li class="list-group-item bg-task text-light w-75">${task}</li>
             <div class="d-flex">
-                <button type="button" class="btn btn-primary btn primary-btn delete-item p-2 px-3 mx-1">Delete</button>
-                <button type="button" class="btn btn-danger edit-item p-2 px-4 mx-1">Edit</button>
+                <button type="button" class="btn btn-danger btn primary-btn delete-item p-2 px-3 mx-1">Delete</button>
+                <button type="button" class="btn btn-primary edit-item p-2 px-4 mx-1">Edit</button>
             </div>
         </div>
         `;
@@ -107,8 +107,8 @@ function searchTask(e) {
                     <div class="d-flex my-2">
                         <li class="list-group-item bg-task text-light w-75">${task}</li>
                         <div class="d-flex">
-                            <button type="button" class="btn btn-primary btn primary-btn delete-item p-2 px-3 mx-1">Delete</button>
-                            <button type="button" class="btn btn-danger edit-item p-2 px-4 mx-1">Edit</button>
+                            <button type="button" class="btn btn-danger btn primary-btn delete-item p-2 px-3 mx-1">Delete</button>
+                            <button type="button" class="btn btn-primary edit-item p-2 px-4 mx-1">Edit</button>
                         </div>
                     </div>
                     `;
